@@ -1,3 +1,5 @@
+@import "~sass-text-stroke/_text-stroke";
+
 .container {
   margin-top: calc(1rem + 40px);
   margin-bottom: calc(2rem + 14px);
@@ -32,11 +34,7 @@
     }
   }
 
-  hr {
-    border-top: 0.2em solid black;
-    margin: 1px auto;
-    width: 80%;
-  }
+
 
   .name {
     display: block;
@@ -48,4 +46,37 @@
     margin-top: 6px;
     margin-bottom: 10px;
   }
+
+  input:checked + span {
+    // color: red;
+    // -webkit-text-stroke: 1px green;
+    // text-shadow:
+    //   0px -2px 0 #fff,
+    //   2px 2px 0 #fff,
+    //   0px 2px 0 #fff,
+    //   2px -2px 0 #fff,
+    //   -2px 0px 0 #fff,
+    //   -2px -2px 0 #fff,
+    //   2px 0px 0 #fff,
+    //   -2px 2px 0 #fff; // worked but not for all labels
+    // text-shadow:
+    //   -20px -16px 0 #fff,
+    //   0px -20px 0 #fff,
+    //   20px -14px 0 #fff,
+    //   -1px -1px 0 #fff,
+    //   20px 0px 0 #fff,
+    //   -20px 16px 0 #fff,
+    //   -2px 20px 0 #fff,
+    //   15px 20px 0 #fff;
+
+    // -webkit-text-stroke: 1px white;
+    // -webkit-text-fill-color: white;
+    text-shadow: text-stroke(1, white);
+  }
+}
+
+hr {
+  border-top: 0.2em solid black;
+  margin: 1px auto;
+  width: 80%;
 }
