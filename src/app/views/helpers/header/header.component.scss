@@ -1,0 +1,49 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    padding-right: 0; 
+    padding-left: 0;
+  }
+
+  nav {
+    margin: auto;
+  }
+
+  .logo {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+
+    .person-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      & * {
+        font-family: 'Sansation', sans-serif !important;
+        letter-spacing: 1px;
+        color: white;
+      }
+
+      margin-left: 8px;
+
+      .name {
+        font-size: 0.67rem;
+      }
+
+      .rank {
+        font-size: 0.6rem;
+
+        small {
+          font-size: 0.45rem;
+        }
+      }
+    }
+  }
+}
+
+//

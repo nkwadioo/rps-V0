@@ -1,8 +1,15 @@
-<header>
-  <div class="logo">
-    <img src="/assets/logo.svg" alt="logo icon" [routerLink]="['/']" >
+<header class="bg-dark p-2 px-3 align-items-center">
+  <!-- d-flex flex-row justify-content-between -->
+  <div class="wrapper container-sm" >
+    <div class="logo">
+      <img src="/assets/logo.svg" alt="logo icon" [routerLink]="['/']" >
+      <div class="person-info">
+        <div class="name">Otlotleng Nkwadi</div>
+        <div class="rank"><small>Rank:</small> 5</div>
+      </div>
+    </div>
+    <nav>
+      <img src="/assets/menu.svg" alt="menu icon">
+    </nav>
   </div>
-  <nav>
-    <img src="/assets/menu.svg" alt="menu icon">
-  </nav>
 </header>

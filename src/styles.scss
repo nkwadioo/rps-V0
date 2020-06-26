@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+$dark: #141414;
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+
+@font-face {
+  font-family: 'Sansation';
+  src: url('/assets/fonts/Sansation-Regular.ttf');
+}
+@font-face {
+  font-family: 'Ravi Prakash';
+  src: url('/assets/fonts/RaviPrakash-Regular.ttf');
+}
+
+* {
+  font-family: 'Ravi Prakash', sans-serif;
+}
