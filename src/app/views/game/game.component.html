@@ -5,15 +5,15 @@
         <span class="name">Computer</span>
         <section>
           <label for="comp_rock" class="box">
-            <input type="radio" #comp_select="ngModel" ngModel name="comp_select" value="rock" id="comp_rock" hidden="hidden">
+            <input disabled type="radio" #comp_select="ngModel" ngModel name="comp_select" value="rock" id="comp_rock" hidden="hidden">
             <span>Rock</span>
           </label>
           <label for="comp_paper" class="box">
-            <input type="radio" #comp_select="ngModel" ngModel name="comp_select" value="paper" id="comp_paper" hidden="hidden">
+            <input disabled type="radio" #comp_select="ngModel" ngModel name="comp_select" value="paper" id="comp_paper" hidden="hidden">
             <span>Paper</span>
           </label>
           <label for="comp_scissors" class="box">
-            <input type="radio" #comp_select="ngModel" ngModel name="comp_select" value="scissors" id="comp_scissors" hidden="hidden">
+            <input disabled type="radio" #comp_select="ngModel" ngModel name="comp_select" value="scissors" id="comp_scissors" hidden="hidden">
             <span>Scissors</span>
           </label>
         </section>
@@ -40,4 +40,23 @@
       </div>
     </form>
   </div>
+</div>
+
+<!-- <app-pop-ups [results]="results"></app-pop-ups> -->
+<div class="alertMsg" [hidden]="!showMsg">
+  <div class="message-wrapper">
+    <div class="massage_body">
+      <img [src]="src" alt="">
+    </div>
+    <!-- <hr> -->
+    <div class="message_actions">
+      <button (click)='close(compForm, meForm)' class="col-6 btn">
+        Retry
+      </button>
+      <button (click)='close(compForm, meForm)' class="col-6 btn">
+        Exit
+      </button>
+    </div>
+  </div>
+
 </div>

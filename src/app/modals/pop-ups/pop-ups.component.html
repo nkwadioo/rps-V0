@@ -1,1 +1,13 @@
-<p>pop-ups works!</p>
+<div class="alertMsg">
+  <div class="massage_body">
+    <img [src]="src" alt="">
+  </div>
+  <div class="message_actions">
+    <button (click)='close()' class="col-6">
+      Retry
+    </button>
+    <button (click)='close()' class="col-6">
+      Exit
+    </button>
+  </div>
+</div>
