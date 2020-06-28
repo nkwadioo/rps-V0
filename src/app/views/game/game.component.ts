@@ -26,6 +26,8 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.showMsg = false;
+
+
   }
 
   mySelection(elmValue, compForm: NgForm, meForm: NgForm) {
@@ -80,5 +82,7 @@ export class GameComponent implements OnInit {
     meForm.reset();
     this.showMsg = false;
   }
+
+
 
 }

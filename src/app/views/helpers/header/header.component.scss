@@ -12,6 +12,13 @@ header {
 
   nav {
     margin: auto;
+
+    svg {
+      fill: white;
+      position: relative;
+      left: 0;
+      width: 20px;
+    }
   }
 
   .logo {
