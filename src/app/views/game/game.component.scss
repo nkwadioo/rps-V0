@@ -2,7 +2,8 @@
 
 .container {
   padding-top: calc(1rem + 40px);
-  height: calc(100vh - 0rem - 54px);
+  // height: calc(100vh - 0rem - 54px);
+  height: calc(100vh - 32px);
 
   .row {
     justify-content: space-between;
