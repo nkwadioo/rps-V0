@@ -14,10 +14,13 @@ header {
     margin: auto;
 
     svg {
-      fill: white;
       position: relative;
       left: 0;
       width: 20px;
+    }
+    svg, polygon {
+      fill: white !important;
+      color: white !important;
     }
   }
 
