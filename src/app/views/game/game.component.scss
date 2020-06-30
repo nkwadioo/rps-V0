@@ -1,15 +1,14 @@
-@import "~sass-text-stroke/_text-stroke";
+// @import "~sass-text-stroke/_text-stroke";
 
 .container {
   padding-top: calc(1rem + 40px);
   // height: calc(100vh - 0rem - 54px);
-  height: calc(100vh - 32px);
+  height: calc(100% - 50px);
 
   .row {
     justify-content: space-between;
     display: flex;
-    height: -webkit-fill-available;
-    height: -moz-fill-available;
+    height: 100%;
     // height: calc(100vh - 3rem - 54px);
   }
 }
@@ -44,21 +43,21 @@
 
   &.p2 .name {
     margin-top: 6px;
-    margin-bottom: 10px;
+    padding-bottom: 16px;
   }
 
   input:checked + span {
     // color: red;
     // -webkit-text-stroke: 1px green;
-    // text-shadow:
-    //   0px -2px 0 #fff,
-    //   2px 2px 0 #fff,
-    //   0px 2px 0 #fff,
-    //   2px -2px 0 #fff,
-    //   -2px 0px 0 #fff,
-    //   -2px -2px 0 #fff,
-    //   2px 0px 0 #fff,
-    //   -2px 2px 0 #fff; // worked but not for all labels
+    text-shadow:
+      0px -2px 0 #fff,
+      2px 2px 0 #fff,
+      0px 2px 0 #fff,
+      2px -2px 0 #fff,
+      -2px 0px 0 #fff,
+      -2px -2px 0 #fff,
+      2px 0px 0 #fff,
+      -2px 2px 0 #fff; // worked but not for all labels
     // text-shadow:
     //   -20px -16px 0 #fff,
     //   0px -20px 0 #fff,
@@ -71,7 +70,7 @@
 
     // -webkit-text-stroke: 1px white;
     // -webkit-text-fill-color: white;
-    text-shadow: text-stroke(1, white);
+    // text-shadow: text-stroke(1, white);
   }
 }
 

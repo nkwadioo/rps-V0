@@ -5,10 +5,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GameComponent } from './views/game/game.component';
 import { PopUpsComponent } from './modals/pop-ups/pop-ups.component';
 import { HeaderComponent } from './views/helpers/header/header.component';
 import { FooterComponent } from './views/helpers/footer/footer.component';
+import { GameComponent } from './views/game/game.component';
+import { FormsComponent } from './views/forms/forms.component';
+import { LoginComponent } from './views/forms/login/login.component';
+import { RegistorComponent } from './views/forms/registor/registor.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { FooterComponent } from './views/helpers/footer/footer.component';
     GameComponent,
     PopUpsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FormsComponent,
+    LoginComponent,
+    RegistorComponent
   ],
   imports: [
     BrowserModule,

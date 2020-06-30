@@ -1,0 +1,33 @@
+<div class="form-wrapper">
+  <header>
+    <img src="/assets/logo.svg" alt="">
+  </header>
+  <main class="container">
+    <div class="wrapper row justify-content-center">
+      <div class="col-10">
+        <div class="tab w-100 my-5 d-flex justify-content-around">
+          <label for="login_tab" [ngClass]="{dim: tabInput == 'registor'}">
+            <input type="radio" #form_select="ngModel" ngModel hidden="hidden" (change)="toggleTab($event.target.value)" value="login" id="login_tab" >
+            <b>Log in</b>
+          </label>
+          <span> | </span>
+          <label for="registor_tab" [ngClass]="{dim: tabInput == 'login'}">
+            <input type="radio" #form_select="ngModel" ngModel hidden="hidden" (change)="toggleTab($event.target.value)" value="registor" id="registor_tab" >
+            <b>Registor</b>
+          </label>
+        </div>
+        <div class="tab-form w-100">
+          <app-login [hidden]="tabInput === 'registor'"></app-login>
+          <app-registor [hidden]="tabInput !== 'registor'"></app-registor>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+  <footer class="bg-dark p-3 align-items-center">
+    <div class="wrapper container-sm" >
+      <div>Created by: <a href="mailto:nkwadioo@gmail.com"> Nkwadi OO</a></div>
+    </div>
+  </footer>
+</div>

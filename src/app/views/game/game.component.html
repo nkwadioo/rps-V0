@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="container">
   <div class="row flex-column">
     <form #compForm="ngForm">
@@ -5,15 +6,15 @@
         <span class="name">Computer</span>
         <section>
           <label for="comp_rock" class="box">
-            <input disabled type="radio" #comp_select="ngModel" ngModel name="comp_select" value="rock" id="comp_rock" hidden="hidden">
+            <input disabled type="radio" #comp_select="ngModel" ngModel name="comp_select" value="0" id="comp_rock" hidden="hidden">
             <span>Rock</span>
           </label>
           <label for="comp_paper" class="box">
-            <input disabled type="radio" #comp_select="ngModel" ngModel name="comp_select" value="paper" id="comp_paper" hidden="hidden">
+            <input disabled type="radio" #comp_select="ngModel" ngModel name="comp_select" value="1" id="comp_paper" hidden="hidden">
             <span>Paper</span>
           </label>
           <label for="comp_scissors" class="box">
-            <input disabled type="radio" #comp_select="ngModel" ngModel name="comp_select" value="scissors" id="comp_scissors" hidden="hidden">
+            <input disabled type="radio" #comp_select="ngModel" ngModel name="comp_select" value="2" id="comp_scissors" hidden="hidden">
             <span>Scissors</span>
           </label>
         </section>
@@ -24,15 +25,15 @@
       <div class="player p2 col-12">
         <section>
           <label for="me_rock" class="box">
-            <input type="radio" #me_select="ngModel" ngModel (change)="mySelection($event.target.value, compForm, meForm)" name="me_select" value="rock" id="me_rock" hidden="hidden">
+            <input type="radio" #me_select="ngModel" ngModel (change)="mySelection($event.target.value, compForm, meForm)" name="me_select" value="0" id="me_rock" hidden="hidden">
             <span>Rock</span>
           </label>
           <label for="me_paper" class="box">
-            <input type="radio" #me_select="ngModel" ngModel (change)="mySelection($event.target.value, compForm, meForm)" name="me_select" value="paper" id="me_paper" hidden="hidden">
+            <input type="radio" #me_select="ngModel" ngModel (change)="mySelection($event.target.value, compForm, meForm)" name="me_select" value="1" id="me_paper" hidden="hidden">
             <span>Paper</span>
           </label>
           <label for="me_scissors" class="box">
-            <input type="radio" #me_select="ngModel" ngModel (change)="mySelection($event.target.value, compForm, meForm)" name="me_select" value="scissors" id="me_scissors" hidden="hidden">
+            <input type="radio" #me_select="ngModel" ngModel (change)="mySelection($event.target.value, compForm, meForm)" name="me_select" value="2" id="me_scissors" hidden="hidden">
             <span>Scissors</span>
           </label>
         </section>
@@ -41,7 +42,7 @@
     </form>
   </div>
 </div>
-
+<app-footer></app-footer>
 <!-- <app-pop-ups [results]="results"></app-pop-ups> -->
 <div class="alertMsg" [hidden]="!showMsg">
   <div class="message-wrapper">

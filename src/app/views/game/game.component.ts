@@ -9,13 +9,23 @@ import { NgForm } from '@angular/forms';
 })
 export class GameComponent implements OnInit {
   rcp = [
-    'rock','paper','paper',
-    'rock','paper','rock',
-    'rock','rock','rock',
-    'scissors','paper','paper',
-    'rock','paper','scissors',
-    'scissors','paper','scissors',
-  ]
+    1,2,3,
+    2,3,1,
+    2,1,3, // 9
+    1,1,2,
+    2,1,2,
+    1,1,2, // 18
+    2,3,3,
+    1,2,2,
+    3,3,2, // 27
+    1,1,1,
+    2,1,3,
+    2,3,3, // 36
+    2,2,3,
+    2,2,2,
+    2,3,1  // 45
+  ];
+  faceValRCP = ['rock', 'paper', 'scissors'];
   me_select;
   comp_select;
   results;
@@ -26,16 +36,16 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.showMsg = false;
-
-
   }
 
   mySelection(elmValue, compForm: NgForm, meForm: NgForm) {
     this.showMsg = false;
-    const compSelect = this.rcp[Math.floor(Math.random() * 18)];
-    compForm.controls.comp_select.setValue(compSelect);
-    console.log(`me: ${elmValue} VS comp: ${compSelect}`);
-    this.showMessage(this.getWinner(compSelect, elmValue));
+    const compSelect = this.rcp[Math.floor(Math.random() * 45)];
+    compForm.controls.comp_select.setValue(compSelect.toString());
+    const myValue = meForm.controls.me_select.value;
+    const compSel = compForm.controls.comp_select.value;
+    console.log(`me: ${myValue} VS comp: ${compSel}`);
+    this.showMessage(this.getWinner(compSel, myValue));
 
   }
 
@@ -56,25 +66,10 @@ export class GameComponent implements OnInit {
   getWinner(comp, me) {
     if (comp === me) {
       return 'TIE';
-    }else if(comp === 'rock') {
-      if (me === 'paper') {
-        return 'WIN';
-      }else {
+    }else if(comp > me) {
         return 'LOOSE';
-      }
-    }else if(comp === 'paper') {
-      if (me === 'rock') {
-        return 'LOOSE';
-      }else {
-        return 'WIN';
-      }
-    }else {
-      if (me === 'paper') {
-        return 'LOOSE';
-      }else {
-        return 'WIN';
-      }
-    }
+    }else
+      return 'WIN';
   }
 
   close(compForm: NgForm, meForm: NgForm) {

@@ -1,0 +1,55 @@
+
+
+.form-wrapper {
+  background-color: #353535 !important;
+  height: 100%;
+  color: white;
+
+  header {
+    img {
+      margin: 16px 0 0 16px;
+    }
+  }
+
+  main {
+    min-height: 50vh;
+
+    .tab {
+      border-bottom: 2px solid black;
+
+      label {
+        font-weight: 100;
+        letter-spacing: 0.04rem;
+      }
+    }
+
+    .dim {
+      color: #747474;
+    }
+  }
+}
+
+
+
+
+
+footer {
+  & * {
+    font-family: 'Sansation', sans-serif !important;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    color: white;
+  }
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+
+  div.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+}
