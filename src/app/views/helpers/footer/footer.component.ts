@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WebSocketService } from 'src/app/service/web-socket.service';
+import { AppDataService } from 'src/app/service/app-data.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private webSocketService: WebSocketService, private appData: AppDataService) {
+
+  }
 
   ngOnInit(): void {
+    // this.webSocketService.listen('footerData').toPromise()
+    // .then( res => {
+
+    // }).catch( err => {
+
+    // }).finally(() => {
+
+    // });
   }
 
 }
