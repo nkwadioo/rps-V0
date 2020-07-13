@@ -12,6 +12,7 @@ import { GameComponent } from './views/game/game.component';
 import { FormsComponent } from './views/forms/forms.component';
 import { LoginComponent } from './views/forms/login/login.component';
 import { RegistorComponent } from './views/forms/registor/registor.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { RegistorComponent } from './views/forms/registor/registor.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule

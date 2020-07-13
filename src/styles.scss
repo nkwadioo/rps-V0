@@ -32,6 +32,13 @@ button.myBtn {
   display: flex;
   color: black;
   background: #F2C94C;
+
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    background-color: #ded1aa;
+  }
 }
 
 // input style

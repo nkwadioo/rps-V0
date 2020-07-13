@@ -1,14 +1,20 @@
-<div class="group">
-  <input type="text" required="required"/><span class="highlight"></span><span class="bar"></span>
-  <label>User name</label>
-</div>
-<div class="group">
-  <input type="password" required="required"/><span class="highlight"></span><span class="bar"></span>
-  <label>New Password</label>
-</div>
-<div class="group">
-  <input type="password" required="required"/><span class="highlight"></span><span class="bar"></span>
-  <label>Comfirm Password</label>
-</div>
-
-<button class="myBtn registor" (click)="registor()">Create User</button>
+<form  #newUserForm="ngForm" (ngSubmit)="registor(newUserForm)">
+  <!-- -->
+  <div class="group">
+    <input type="text" name="username" id="username" #username="ngModel" ngModel [(ngModel)]="resForm.username" required="required"/>
+    <span class="highlight"></span><span class="bar"></span>
+    <label>User name</label>
+  </div>
+  <div class="group">
+    <input type="password" name="newPassword" id="newPassword" #newPassword="ngModel" ngModel ngModel [(ngModel)]="resForm.newPassword" (change)="password()" required="required"/>
+    <span class="highlight"></span><span class="bar"></span>
+    <label>New Password</label>
+  </div>
+  <div class="group">
+    <input type="password" name="comfirmPassword" id="comfirmPassword" #comfirmPassword="ngModel" ngModel ngModel [(ngModel)]="resForm.comfirmPassword" (change)="password()" required="required"/>
+    <span class="highlight"></span><span class="bar"></span>
+    <label>Comfirm Password</label>
+  </div>
+ <!-- && !(newPassword == comfirmPassword) -->
+  <button class="myBtn registor" [disabled]="newUserForm.invalid || (resForm.newPassword !== resForm.comfirmPassword || resForm.comfirmPassword.length <= 0)" >Create User</button>
+</form>

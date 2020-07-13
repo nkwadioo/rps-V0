@@ -7,7 +7,7 @@ import { AppDataService } from './service/app-data.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
 
   title = 'RPS';
 
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
   }
 
 
-  ngOnInit(): void {
-    throw new Error("Method not implemented.");
-  }
+  // ngOnInit(): void {
+  //   throw new Error("Method not implemented.");
+  // }
 }
